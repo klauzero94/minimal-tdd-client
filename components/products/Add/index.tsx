@@ -8,7 +8,7 @@ const Add = ({ refreshList }: any) => {
 
   const addProduct = async (data: any) => {
     const response = await (
-      await fetch("https://minimal-tdd-dev.herokuapp.com/products", {
+      await fetch(process.env.API_URL + "products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
