@@ -26,7 +26,7 @@ const Products = ({
     <div>
       <Box my={4}>
         <Center>
-          <h2>Lista de produtos recentes</h2>
+          <h2>Lista de produtos</h2>
         </Center>
       </Box>
       <Table size="sm">
@@ -34,7 +34,6 @@ const Products = ({
           <Tr>
             <Th>Título</Th>
             <Th>Descrição</Th>
-            <Th>Adicionado em</Th>
             <Th isNumeric>Preço</Th>
             <Th textAlign="right">Ações</Th>
           </Tr>
@@ -44,7 +43,6 @@ const Products = ({
             <Tr key={product.id}>
               <Td>{product.name}</Td>
               <Td>{product.description}</Td>
-              <Td>{product.createdAt}</Td>
               <Td isNumeric>{product.price}</Td>
               <Td textAlign="right">
                 <ButtonGroup gap="2">
