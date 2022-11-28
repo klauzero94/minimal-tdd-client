@@ -16,7 +16,7 @@ export default function Home() {
   const toast = useToast();
   const getProducts = async () => {
     const response = await (
-      await fetch(process.env.API_URL + `products`)
+      await fetch(process.env.NEXT_PUBLIC_API + `products`)
     ).json();
     const data: Array<ProductResponse> = response.data;
     setProducts(data);
@@ -24,7 +24,7 @@ export default function Home() {
 
   const deleteProduct = async (id: string) => {
     const response = await (
-      await fetch(process.env.API_URL + `products/${id}`, {
+      await fetch(process.env.NEXT_PUBLIC_API + `products/${id}`, {
         method: "DELETE",
       })
     ).json();

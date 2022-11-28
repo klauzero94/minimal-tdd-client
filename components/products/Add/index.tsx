@@ -8,7 +8,7 @@ const Add = ({ refreshList }: any) => {
 
   const addProduct = async (data: any) => {
     const response = await (
-      await fetch(process.env.API_URL + "products", {
+      await fetch(process.env.NEXT_PUBLIC_API + "products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
