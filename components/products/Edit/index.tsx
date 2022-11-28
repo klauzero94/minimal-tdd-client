@@ -15,7 +15,7 @@ const Edit = ({
 
   const editProduct = async (data: any, id: string) => {
     const response = await (
-      await fetch(`http://localhost:5049/products/${id}`, {
+      await fetch(`https://minimal-tdd-dev.herokuapp.com/products/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

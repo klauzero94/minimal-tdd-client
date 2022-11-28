@@ -15,7 +15,7 @@ export default function Home() {
   const toast = useToast();
   const getProducts = async () => {
     const response = await (
-      await fetch("http://localhost:5049/products")
+      await fetch("https://minimal-tdd-dev.herokuapp.com/products")
     ).json();
     const data: Array<ProductResponse> = response.data;
     setProducts(data);
@@ -23,7 +23,7 @@ export default function Home() {
 
   const deleteProduct = async (id: string) => {
     const response = await (
-      await fetch(`http://localhost:5049/products/${id}`, {
+      await fetch(`https://minimal-tdd-dev.herokuapp.com/products/${id}`, {
         method: "DELETE",
       })
     ).json();

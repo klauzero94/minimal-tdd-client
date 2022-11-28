@@ -8,7 +8,7 @@ const Add = ({ refreshList }: any) => {
 
   const addProduct = async (data: any) => {
     const response = await (
-      await fetch("http://localhost:5049/products", {
+      await fetch("https://minimal-tdd-dev.herokuapp.com/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
